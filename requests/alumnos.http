@@ -1,0 +1,46 @@
+@api = http://localhost:3900/api/alumnos
+
+
+###--------------------------------------------------------
+### C
+### Crear el registro de un alumno
+POST {{api}}/crearAlumno
+Content-Type: application/json
+
+{
+    "nombre": "Maria Valeria"
+}
+
+
+###-----------------------------------------------------------
+### R - ejemplo simple
+### Obtener los datos de todos los alumnos
+{{api}}/getAlumnos
+
+
+
+###------------------------------------------------------------
+### R - ejemplo con parametro
+### Obtener los datos de un alumno escogiendo el id
+{{api}}/getAlumnoById/4
+
+
+
+###-------------------------------------------------------------
+### U
+### update
+PUT http://localhost:3900/api/alumnos/actualizarAlumno/12
+Content-Type: application/json
+
+{
+    "nombre": "Rebeca Maria",
+    "cantidad" : 13
+}
+
+
+###--------------------------------------------------------------
+### D
+### delete product 
+DELETE {{api}}/borrarAlumnoById/12
+
+### R simple, R parametro, C, U, D
